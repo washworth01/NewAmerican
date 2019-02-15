@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>User Account</title>
+
+        <link href="project.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <ul>
+                <li id="login"><a href="index.html">Home</a></li>
+                <li id="search"><a id="searchLink" href=searchpage.html>Search</a></li>
+                <li id="account"><a id="accountLink" href=accountPage.html>Account</a></li>
+                <li id="quickLogin">
+                    Username<input id="inputUsername" type="text"></input>
+                    Password<input id="inputPassword" type="password"></input>
+                    <input id="buttonLogin" value="Login" type=button onclick="loginUser()"></input>
+                </li>
+            </ul>
+        </div>
+        <div class="page-header">
+            <h1 id = "usernameTitle">[Alterable Field for Username]</h1>
+            <div class="vertical-navbar">
+                    <ul>
+                        <li id="description"><button id="getSchedule" onclick="loadDescription()">Description</a></li>
+                        <li id="schedule"><button id="getSchedule" onclick="loadSchedule()">Schedule</a></li>
+                        <li id="messages"><button id="getMessages" onclick="loadMessages()">Messages</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="user-detail">
+            <div class="user-description">
+                <table id="dynamic-data"></table>
+            </div>
+        <div><br>
+        <div class="team-details">
+            <ul>
+                <li>
+                    <h3>Offensive Team Members</h3>
+                    <table class="breakdown-table" id="offence"></table>
+                </li>
+                <li>
+                    <h3>Defensive Team Members</h3>
+                    <table class="breakdown-table" id="defence"></table>
+                </li>
+                <li>
+                    <h3>Special Team Members</h3>
+                    <table class="breakdown-table" id="special"></table>
+                </li>
+            </ul>
+        </div>
+        <script src=accountPage.js></script>
+    </body>
+</html>

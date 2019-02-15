@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Search</title>
+
+        <link href="project.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <ul>
+                <li id="home"><a href="index.html">Home</a></li>
+                <li id="search"><a id="searchLink" href=searchpage.html>Search</a></li>
+                <li id="account"><a id="accountLink" href=accountPage.html>Account</a></li>
+                <li id="quickLogin">
+                    Username<input id="inputUsername" type="text"></input>
+                    Password<input id="inputPassword" type="password"></input>
+                    <input id="buttonLogin" value="Login" type=button onclick="login()"></input>
+                </li>
+            </ul>
+        </div>
+        <div class="page-header">
+            <img src="LineOfSkrimmage.jpg" alt="Skrimmage"/>
+            <h1 id="searchTitle">Search for Players</h1>
+        </div>
+        <div class="change-search">
+            <ul>
+                <h2>Type Of User</h2>
+                    <li>
+                        <select id = "userDropDown" >
+                            <option value=1>Player</option>
+                            <option value=2>Coach</option>
+                        </select>
+                        <input id="changeUser" type="button" value="Change User Type" onClick="changeUserType(document.getElementById('userDropDown').value);">
+                    </li>
+            </ul>
+        </div>
+        <div class="search-filters">
+            <ul>
+                <h2 id="roleFilter">Player Role</h2>
+                    <li>
+                        <select id = "roleDropDown" >
+                            <option value="All">All</option>
+                            <option value="Offence">Offence</option>
+                            <option value="Defence">Defence</option>
+                            <option value="Special">Special</option>
+                        </select>
+                        <input id="submit" type="button" value="Filter" onClick="findByRole(document.getElementById('roleDropDown').value);">
+                    </li>
+                <h2>Player Position</h2>
+                <li><input id="playerPositionFilter" type=text></input></li>
+                <li></li><button id="playerPositionButton" value="Search" onclick="findByPosition();">Search</button></li>
+            </ul>
+        </div>
+        <div class = user-details></div>
+        <div class="user-table">
+            <table id ="searchTable"></table>
+        </div>
+        <script src=searchpage.js></script>
+    </body>
+</html>
